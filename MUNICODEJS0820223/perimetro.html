@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perimetro</title>
+</head>
+<body>
+    <script>
+        const PI = 3.1416;
+
+        function calcularArea(radio) {
+        let area = PI * (radio * radio);
+        return area;
+        }
+
+        function calcularPerimetro(radio) {
+        let perimetro = 2 * PI * radio;
+        return perimetro;
+        }
+
+        let a = calcularArea(5);
+        document.write("El área es " + a);
+
+        let r = parseInt(prompt("Ingrese radio"));
+        a = calcularArea(r);
+        document.write("El área es " + a);
+
+        let p = calcularPerimetro(r);
+        document.write("El perímetro es " + p);
+    </script>
+</body>
+</html>

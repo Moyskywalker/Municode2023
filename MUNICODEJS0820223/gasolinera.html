@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GASOLINERA</title>
+</head>
+<body>
+    <script>
+        function calcularDescuento(dia, monto) 
+    {
+            let descuento = 0;
+
+    if (dia === "sabado" || dia === "domingo") 
+    {
+    descuento = 10;
+    } 
+    else 
+    {
+    descuento = 5;
+    }
+    let porcentajeDescuento = monto > 150 ? descuento : 0;
+    if (porcentajeDescuento > 0) 
+    {
+    return `El porcentaje de descuento a aplicar es del ${porcentajeDescuento}%.`;
+    } 
+    else 
+    {
+    return "No tiene descuento.";
+    }
+    }
+    let diaDeLaSemana = "sabado";
+    let montoConsumido = 200.00;
+
+    let resultado = calcularDescuento(diaDeLaSemana, montoConsumido);
+    console.log(resultado);
+    </script>
+</body>
+</html>

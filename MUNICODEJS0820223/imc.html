@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const formulario = document.getElementById('formulario');
+        const pesoInput = document.getElementById('peso');
+        const estaturaInput = document.getElementById('estatura');
+        const resultadoIMC = document.getElementById('resultado-imc');
+        formulario.addEventListener('submit', function(e) {
+         e.preventDefault(); // Evitar que se envíe el formulario
+        const peso = parseFloat(pesoInput.value);
+        const estatura = parseFloat(estaturaInput.value);
+        if (isNaN(peso) || isNaN(estatura) || peso <= 0 || estatura <= 0) {
+        resultadoIMC.textContent = 'Por favor ingrese valores válidos.';
+        return;
+        }
+        const pesoKilos = peso / 2.20462;
+        const imc = pesoKilos / estatura;
+
+  
+        resultadoIMC.textContent = 'Su IMC es: ' + imc.toFixed(2);
+        });
+    </script>
+</body>
+</html>

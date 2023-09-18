@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nit = prompt("Ingrese el NIT");
+        document.write("<ol>");
+        let respuesta = "S";
+        let subtotal = 0;
+        
+        while(respuesta == "S" ){
+            let producto = prompt("Ingrese el producto 😀");
+            let precioUnitario = parseFloat(prompt("Ingrese el precio unitario 😄"));
+            let cantidad = parseInt(prompt("Ingrese la cantidad 😉"));
+            let subtotalProducto = precioUnitario * cantidad;
+            subtotal += subtotalProducto;
+            
+            document.write("<li>"+cantidad+" "+producto+" precio unitario Q."+precioUnitario.toFixed(2)+" subtotal Q"+subtotalProducto.toFixed(2)+"</li>");
+            
+            respuesta = prompt("Desea ingresar otro producto S/N 🤔");
+         }
+         document.write("</ol>");
+         document.write("<h3> NIT "+nit+"</h3>");
+         document.write("<h3> Subtotal Q"+subtotal.toFixed(2)+"</h3>");
+    </script>
+</body>
+</html>
